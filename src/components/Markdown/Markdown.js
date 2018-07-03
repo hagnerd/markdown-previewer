@@ -19,6 +19,7 @@ export default class Markdown extends React.Component {
 
   render() {
     const { rawMarkdown } = this.state;
-    return this.props.render({ rawMarkdown });
+    const { handleChange } = this;
+    return this.props.render({ rawMarkdown, handleChange });
   }
 }
