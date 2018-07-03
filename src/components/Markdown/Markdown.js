@@ -1,7 +1,12 @@
 import React from 'react';
 
 const initialState = {
-  rawMarkdown: '# H1\n ## H2\n [Link](https://github.com)\n\n* List Item',
+  rawMarkdown: `
+  # H1 
+  ## H2 
+  [Link](https://github.com)
+  * List Item
+  `,
 };
 
 export default class Markdown extends React.Component {
@@ -13,6 +18,7 @@ export default class Markdown extends React.Component {
     });
 
   render() {
-    return <div>Markdown</div>;
+    const { rawMarkdown } = this.state;
+    return this.props.render({ rawMarkdown });
   }
 }
