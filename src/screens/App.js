@@ -26,6 +26,20 @@ injectGlobal`
     border: 2px solid #f2f2f2;
     border-radius: 5px;
   }
+
+  blockquote {
+    border-left: 5px solid #287DFF;
+    padding: 5px 20px; 
+  }
+
+  a {
+    text-decoration: none;
+    color: #287DFF;
+    &:hover {
+      color: #244FB5;
+    }
+  }
+
 `;
 
 const wrapper = css`
