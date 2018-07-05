@@ -1,8 +1,14 @@
 import React from 'react';
-import MdParse from 'markdown-to-jsx';
+import markdown from 'marked';
+
+function parseMd(text) {
+  return {
+    __html: markdown(text),
+  };
+}
 
 function Preview({ rawMd }) {
-  return <MdParse id="preview">{rawMd}</MdParse>;
+  return <div id="preview" dangerouslySetInnerHTML={parseMd(rawMd)} />;
 }
 
 export default Preview;
